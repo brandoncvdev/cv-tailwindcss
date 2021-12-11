@@ -1,0 +1,28 @@
+<div class="max-w-sm rounded flex border border-gray-400 shadow-lg m-2">
+    <div class="flex w-full">
+        <div class="p-2">
+            <img class="w-10 h-10" [src]="skill.icon" alt="" />
+        </div>
+        <div class="pt-1 w-full px-2">
+            <div class="flex justify-between">
+                <span>{{ skill.title }}</span>
+                <!-- <img class="rounded mb-2 w-40 h-10" [src]="skill.icon" alt="" /> -->
+                <span class="flex-">{{ skill.percentage }}</span>
+            </div>
+            <div class="overflow-hidden h-2 text-xs flex rounded bg-red-200">
+                <div
+                    class="
+                        shadow-none
+                        flex flex-col
+                        text-center
+                        whitespace-nowrap
+                        text-white
+                        justify-center
+                        bg-red-500
+                    "
+                    ngClass="{{ skill.width }}"
+                ></div>
+            </div>
+        </div>
+    </div>
+</div>

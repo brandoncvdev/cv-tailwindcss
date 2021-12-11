@@ -1,0 +1,52 @@
+<div class="p-4">
+    <div class="intro-me">
+        <h3 class="font-bold">Sobre mi</h3>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad,
+            recusandae harum provident, beatae iusto culpa veritatis maiores qui
+            consequatur nemo. Commodi quam et excepturi sit. Ullam vero natus
+            quae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt
+            earum iste id dignissimos dolorum repudiandae corporis vel fugiat
+            cumque, impedit minima tempore quidem eaque. Rem obcaecati tempore
+            error? Odit, error? Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit.<br /><br />
+            Dolore itaque optio delectus harum nisi omnis veniam velit maxime
+            modi ducimus. Hic qui consequuntur odit corporis molestias ipsum
+            commodi nihil non. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ducimus excepturi iure deserunt placeat aliquam,
+            laborum, voluptate reprehenderit maxime culpa distinctio animi hic
+            rerum necessitatibus cumque nulla perferendis blanditiis id tenetur.
+        </p>
+    </div>
+
+    <div class="mt-4">
+        <h3 class="font-bold mb-2">Habilidades</h3>
+
+        <h5 class="font-bold mb-2">Front-End</h5>
+        <div class="flex flex-wrap">
+            <info-skill
+                *ngFor="let skill of skills"
+                [skill]="skill"
+                class="w-1/3"
+            ></info-skill>
+        </div>
+
+        <h4 class="font-bold mb-2">Back-End</h4>
+        <div class="flex flex-wrap">
+            <info-skill
+                *ngFor="let skillBack of skillBackend"
+                [skill]="skillBack"
+                class="w-1/3"
+            ></info-skill>
+        </div>
+
+        <h4 class="font-bold mb-2">Bases de datos</h4>
+        <div class="flex flex-wrap">
+            <info-skill
+                *ngFor="let skillDBS of skillsDBS"
+                [skill]="skillDBS"
+                class="w-1/3"
+            ></info-skill>
+        </div>
+    </div>
+</div>
