@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+    height: 100%;
+    @font-face {
+        font-family: "Oxygen";
+        src: local("Oxygen"),
+            url(./assets/fonts/Poppins-Thin.ttf) format("truetype");
+    }
+    body {
+        font-family: "Oxygen", Arial, Helvetica, sans-serif;
+        height: 100%;
+    }
+}
