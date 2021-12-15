@@ -18,8 +18,6 @@ export class NavBarColorDirective implements OnChanges {
     ) {}
 
     ngOnChanges(): void {
-        console.log(this.colorNavBar);
-
         if (this.colorNavBar) {
             this.renderer2.addClass(
                 this._elementRef.nativeElement,
