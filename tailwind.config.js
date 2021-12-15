@@ -34,6 +34,9 @@ module.exports = {
             borderRadius: {
                 "4xl": "2rem",
             },
+            backgroundImage: {
+                github: "url('./assets/img/github-g6f66e842f_640.png')",
+            },
         },
     },
 };

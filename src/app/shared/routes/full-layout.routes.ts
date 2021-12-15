@@ -24,4 +24,11 @@ export const Full_ROUTES: Routes = [
                 (m) => m.ExperienceModule
             ),
     },
+    {
+        path: 'repositorio',
+        loadChildren: () =>
+            import('../../pages/repository/repository.module').then(
+                (m) => m.RepositoryModule
+            ),
+    },
 ];
