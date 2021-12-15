@@ -1,9 +1,0 @@
-<div class="p-4">
-    <div *ngIf="repositories.length > 0" class="flex flex-wrap w-full m-auto">
-        <container-repo
-            *ngFor="let repository of repositories"
-            [dataRepo]="repository"
-            class="m-auto"
-        ></container-repo>
-    </div>
-</div>
