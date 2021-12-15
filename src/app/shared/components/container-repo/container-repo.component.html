@@ -1,0 +1,23 @@
+<div
+    class="max-w-sm rounded flex border border-gray-400 shadow-lg m-2 card-zoom"
+>
+    <div class="w-full card-zoom-image bg-github text-center opacity-50"></div>
+    <div class="flex flex-wrap text-center z-10 h-full">
+        <div class="w-full font-bold text-2xl">
+            <h3>{{ dataRepo.name | titlecase }}</h3>
+        </div>
+        <div class="w-full font-semibold">
+            <p>
+                {{
+                    dataRepo.description
+                        ? (dataRepo.description | slice: 0:60) + "..."
+                        : ""
+                }}
+            </p>
+        </div>
+        <div class="w-full font-bold text-xs flex flex-col">
+            <span class="">{{ dataRepo.owner.login }}</span>
+            <span>{{ dataRepo.updated_at }}</span>
+        </div>
+    </div>
+</div>
