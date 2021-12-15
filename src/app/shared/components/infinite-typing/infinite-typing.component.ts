@@ -24,6 +24,8 @@ export class InfiniteTypingComponent implements AfterViewInit {
     @Input() typingSpeedMilliseconds = 300;
     @Input() deleteSpeedMilliseconds = 300;
 
+    private wordArrayTwo: string[] = ['Brandon Castillo Villa'];
+
     public i = 0;
 
     constructor(private renderer: Renderer2) {}
@@ -73,8 +75,9 @@ export class InfiniteTypingComponent implements AfterViewInit {
             if (word?.length > 0) {
                 this.textElement.nativeElement.innerHTML += word.shift();
             } else {
-                setTimeout(this.deletingEffect, 20000);
-                //this.deletingEffect();
+                setTimeout(() => {
+                    this.deletingEffect();
+                }, 5000);
                 return;
             }
             setTimeout(loopTyping, this.typingSpeedMilliseconds);
@@ -89,8 +92,7 @@ export class InfiniteTypingComponent implements AfterViewInit {
                 word.pop();
                 this.textElement.nativeElement.innerHTML = word.join('');
             } else {
-                //console.log(this.wordArray.length, this.i);
-                this.i = this.wordArray.length >= this.i ? this.i + 1 : 0;
+                this.i = this.wordArray?.length > this.i + 1 ? this.i + 1 : 0;
                 this.typingEffect();
                 return false;
             }

@@ -33,7 +33,8 @@
     <!-- Global navigation -->
     <nav>
         <ul class="list-reset md:flex md:items-center">
-            <li class="md:ml-4" *ngFor="let item of config; let i = index">
+            <li class="li-container" *ngFor="let item of config; let i = index">
+                <div class="ping-items-header hidden" #pinItem></div>
                 <a
                     #navComp
                     class="
