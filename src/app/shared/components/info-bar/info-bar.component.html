@@ -7,21 +7,24 @@
     </div>
     <div>
         <p>
-            Me apasionan las tecnologías web, también creo contenido en Youtube
-            me encantan los proyectos retadores y aportar conocimiento a la
-            comunidad.
+            Soy un entusiasta con ganas de seguir mejorando mis habilidades,
+            aprender nuevas tecnologias y crecer profesionalmente.
         </p>
     </div>
     <div class="flex justify-around mt-4">
-        <a *ngFor="let icon of socialIcons" class="text-center"
-            ><img class="w-10" [src]="icon"
+        <a
+            *ngFor="let icon of socialIcons"
+            class="text-center"
+            [href]="icon.label"
+            target="blank"
+            ><img class="w-10" [src]="icon.url"
         /></a>
     </div>
     <div class="mt-4 flex justify-center mt-2">
         <div class="avatar-markup flex justify-center">
             <div class="avatar-markup-img flex justify-center">
                 <img
-                    src="../../../../assets/img/IMG_20210422_093746_272.jpg"
+                    src="/assets/img/IMG_20210422_093746_272.jpg"
                     alt=""
                     srcset=""
                 />
