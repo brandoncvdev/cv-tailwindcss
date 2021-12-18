@@ -1,0 +1,23 @@
+<div class="">
+    <div
+        class="
+            p-4
+            mb-4
+            text-sm text-green-700
+            bg-green-100
+            rounded-lg
+            dark:bg-green-200 dark:text-green-800
+        "
+        role="alert"
+        [@fadeAnimation]="{
+            value: animationState,
+            params: {
+                fadeIn: toastConfig.animation?.fadeIn,
+                fadeOut: toastConfig.animation?.fadeOut
+            }
+        }"
+        (@fadeAnimation.done)="onFadeFinished($event)"
+    >
+        <span class="font-medium"></span> {{ data.text }}
+    </div>
+</div>

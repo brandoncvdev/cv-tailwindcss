@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "@angular/cdk/overlay-prebuilt.css";
 
 html {
     height: 100%;
@@ -14,4 +15,15 @@ html {
         font-family: "Oxygen", Arial, Helvetica, sans-serif;
         height: 100vh;
     }
+}
+
+.icon-container {
+    @apply flex items-center justify-center m-auto w-12 h-12 p-2;
+    .icon-source {
+        @apply w-full h-full rounded-full bg-center bg-cover;
+    }
+}
+
+.toasts-overlay {
+    position: absolute;
 }

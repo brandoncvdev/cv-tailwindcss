@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 
 import { fadeInAnimation } from '@shared/animations/route-animations';
-import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-full-layout',

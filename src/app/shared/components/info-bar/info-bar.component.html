@@ -12,24 +12,37 @@
         </p>
     </div>
     <div class="flex justify-around mt-4">
-        <a
-            *ngFor="let icon of socialIcons"
-            class="text-center"
-            [href]="icon.label"
-            target="blank"
-            ><img class="w-10" [src]="icon.url"
-        /></a>
+        <ng-container *ngFor="let icon of socialIcons">
+            <span [ngSwitch]="icon.type">
+                <div
+                    *ngSwitchCase="'func'"
+                    (click)="alertTextCopied(icon.label)"
+                    class="cursor-pointer"
+                >
+                    <div class="icon-container">
+                        <div class="icon-source {{ icon.url }}"></div>
+                    </div>
+                </div>
+                <a
+                    *ngSwitchDefault
+                    class="text-center"
+                    [href]="icon.label"
+                    target="blank"
+                >
+                    <div class="icon-container">
+                        <div class="icon-source {{ icon.url }}"></div>
+                    </div>
+                </a>
+            </span>
+        </ng-container>
     </div>
-    <div class="mt-4 flex justify-center mt-2">
+    <div class="mt-4 flex justify-center">
         <div class="avatar-markup flex justify-center">
             <div class="avatar-markup-img flex justify-center">
-                <img
-                    src="/assets/img/IMG_20210422_093746_272.jpg"
-                    alt=""
-                    srcset=""
-                />
+                <div class="card-zoom">
+                    <div class="card-zoom-image bg-profileImage"></div>
+                </div>
             </div>
-            <!-- <div class="avatar-markup-inner"></div> -->
         </div>
     </div>
 </div>

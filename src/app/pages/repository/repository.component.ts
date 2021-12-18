@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { fadeInAnimation } from '@shared/animations/route-animations';
 import { DataRepository } from '@shared/models/config-repo-container';
 import { GithubService } from '@shared/services/github/github.service';
 
@@ -6,6 +7,8 @@ import { GithubService } from '@shared/services/github/github.service';
     selector: 'app-repository',
     templateUrl: './repository.component.html',
     styleUrls: ['./repository.component.scss'],
+    animations: [fadeInAnimation],
+    host: { '[@fadeInAnimation]': '' },
 })
 export class RepositoryComponent implements OnInit {
     public repositories: DataRepository[];

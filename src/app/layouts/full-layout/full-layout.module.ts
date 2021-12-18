@@ -29,6 +29,5 @@ const routes: Routes = [
         SpinnerModule,
         RouterModule.forChild(routes),
     ],
-    providers: [],
 })
 export class FullLayoutModule {}

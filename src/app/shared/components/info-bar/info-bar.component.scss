@@ -10,3 +10,11 @@
 .container-typing {
     height: 180px;
 }
+
+.card-zoom {
+    @apply relative flex items-center justify-center m-auto w-36 h-36;
+}
+
+.card-zoom-image {
+    @apply absolute w-full h-full rounded-full bg-center bg-cover;
+}

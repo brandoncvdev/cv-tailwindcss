@@ -36,6 +36,10 @@ module.exports = {
             },
             backgroundImage: {
                 github: "url('./assets/img/github-g6f66e842f_640.png')",
+                profileImage: "url('./assets/img/IMG_20210422_093746_272.jpg')",
+                gitIcon: "url('./assets/icons/github-alt-brands.svg')",
+                telegramIcon: "url('./assets/icons/telegram-brands.svg')",
+                linkedinIcon: "url('./assets/icons/icons8-linkedin.svg')",
             },
         },
     },
