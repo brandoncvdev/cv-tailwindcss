@@ -9,6 +9,7 @@
 
 .container-typing {
     height: 180px;
+    @apply h-48 lg:h-60 sm:h-96;
 }
 
 .card-zoom {

@@ -22,6 +22,10 @@ export class InfoBarComponent {
                 url: 'bg-linkedinIcon',
                 label: 'https://linkedin.com/in/brandon-castillo777',
             },
+            {
+                url: 'bg-pinIcon',
+                label: 'Puebla, México',
+            },
         ];
     }
 

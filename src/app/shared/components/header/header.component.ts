@@ -19,9 +19,11 @@ export class HeaderComponent implements AfterViewInit {
     @ViewChildren('navComp') navBarComp!: QueryList<ElementRef>;
     @ViewChildren('pinItem') pingComp!: QueryList<ElementRef>;
     public config: NavConfig[];
+    public stateButtonMenu: boolean;
 
     constructor(private renderer2: Renderer2) {
         this.config = NAVBARCONFIG;
+        this.stateButtonMenu = false;
     }
 
     ngAfterViewInit(): void {
@@ -57,5 +59,13 @@ export class HeaderComponent implements AfterViewInit {
     private addNavClassLightweigth(element: ElementRef): void {
         this.renderer2.addClass(element.nativeElement, 'text-gray-500');
         this.renderer2.removeClass(element.nativeElement, 'text-black');
+    }
+
+    public handleMenuButton(): void {
+        if (!this.stateButtonMenu) {
+            this.stateButtonMenu = true;
+        } else {
+            this.stateButtonMenu = false;
+        }
     }
 }

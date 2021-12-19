@@ -24,17 +24,34 @@
             </a>
         </p>
 
-        <a class="text-black hover:text-orange md:hidden" href="#">
-            <i class="fa fa-2x fa-bars"></i>
-        </a>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+            <button
+                class="outline-none mobile-menu-button"
+                (click)="handleMenuButton()"
+            >
+                <svg
+                    class="w-6 h-6 text-gray-500"
+                    x-show="!showMenu"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
     </div>
     <!-- END Logo text or image -->
 
     <!-- Global navigation -->
-    <nav>
-        <ul class="list-reset md:flex md:items-center">
+    <nav class="flex">
+        <ul class="hidden list-reset md:flex md:items-center">
             <li class="li-container" *ngFor="let item of config; let i = index">
-                <div class="ping-items-header hidden" #pinItem></div>
+                <div class="ping-items-header" #pinItem></div>
                 <a
                     #navComp
                     class="
@@ -55,6 +72,36 @@
                 </a>
             </li>
         </ul>
+
+        <div *ngIf="stateButtonMenu" class="flex md:hidden w-full text-center">
+            <ul class="list-reset w-full">
+                <li
+                    *ngFor="let item of config; let i = index"
+                    class="li-container"
+                >
+                    <a
+                        #navComp
+                        class="
+                            border-t
+                            block
+                            no-underline
+                            py-2
+                            text-gray-500
+                            hover:text-black
+                            md:border-none md:p-0
+                            font-semibold
+                        "
+                        (click)="navBarStatus(i)"
+                        [colorNavBar]="item.status"
+                        [routerLink]="['/' + item.url]"
+                    >
+                        {{ item.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <!-- END Global navigation -->
 </header>
+
+<ng-template #name> </ng-template>

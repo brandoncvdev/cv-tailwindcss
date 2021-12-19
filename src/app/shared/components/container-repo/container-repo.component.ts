@@ -6,10 +6,6 @@ import { DataRepository } from '@shared/models/config-repo-container';
     templateUrl: './container-repo.component.html',
     styleUrls: ['./container-repo.component.scss'],
 })
-export class ContainerRepoComponent implements OnInit {
+export class ContainerRepoComponent {
     @Input() public dataRepo!: DataRepository;
-
-    constructor() {}
-
-    ngOnInit(): void {}
 }
